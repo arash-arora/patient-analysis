@@ -11,7 +11,7 @@ export default function country() {
   useEffect(() => {
     const fetchCountryData = async () => {
       const resp = await fetch(
-        `http://localhost:5000/country/?name=${country}&limit=${page}`
+        `https://patient-analysis.arasharora.repl.co/country/?name=${country}&limit=${page}`
       );
       const data = await resp.json();
       console.log(data);
@@ -19,7 +19,7 @@ export default function country() {
     };
     const allData = async () => {
       const response = await fetch(
-        `http://localhost:5000/allcountries/?name=${country}`
+        `https://patient-analysis.arasharora.repl.co/allcountries/?name=${country}`
       );
       const dat = await response.json();
       setAllData(dat);

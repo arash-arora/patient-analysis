@@ -32,7 +32,7 @@ const Name = () => {
       if (router.isReady) {
         const { name } = router.query;
         const resp = await fetch(
-          `http://localhost:5000/trackable/?name=${name}&limit=${page}`
+          `https://patient-analysis.arasharora.repl.co/trackable/?name=${name}&limit=${page}`
         );
         const data = await resp.json();
         setTrackableData(data);
@@ -45,7 +45,9 @@ const Name = () => {
     const fetchAllData = async () => {
       if (router.isReady) {
         const { name } = router.query;
-        const resp = await fetch(`http://localhost:5000/stats/?name=${name}`);
+        const resp = await fetch(
+          `https://patient-analysis.arasharora.repl.co/stats/?name=${name}`
+        );
         const data = await resp.json();
         setAllData(data);
       }

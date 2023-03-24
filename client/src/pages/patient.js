@@ -14,7 +14,7 @@ function patient() {
         const { patient } = router.query;
         console.log(patient);
         const resp = await fetch(
-          `http://localhost:5000/illness/?user_id=${patient}`
+          `https://patient-analysis.arasharora.repl.co/illness/?user_id=${patient}`
         );
         const data = await resp.json();
         setPatient(patient);

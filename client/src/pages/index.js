@@ -17,7 +17,7 @@ export default function Home() {
     if (router.isReady) {
       fetchdata = setTimeout(async () => {
         const response = await fetch(
-          `http://localhost:5000/persons?search=${search}`
+          `https://patient-analysis.arasharora.repl.co/persons?search=${search}`
         );
         const data = await response.json();
         setData(data);
@@ -29,7 +29,7 @@ export default function Home() {
   const patientData = async (user_id) => {
     try {
       const resp = await fetch(
-        `http://localhost:5000/illness/?user_id=${user_id}`
+        `https://patient-analysis.arasharora.repl.co/illness/?user_id=${user_id}`
       );
       const data = await resp.json();
       setpatientdata(data);
